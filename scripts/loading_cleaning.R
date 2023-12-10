@@ -48,8 +48,8 @@ for (i in seq(files)){
     mutate(year = str_sub(files[i], 1, 4)) %>% #this lets us make sure we know the date of the data
     clean_names()
   
-  kff_files[i] <- kff_year
+  kff_files[[i]] <- kff_year
 }
 
 
-
+kff_files
